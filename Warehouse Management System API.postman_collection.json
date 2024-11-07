@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "2ca053b6-a69a-42bc-9635-da2611bf618a",
+		"name": "Warehouse Management System API",
+		"description": "API for Hanpoom Warehouse Management System Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12790626"
+	},
+	"item": [
+		{
+			"name": "picking-slips",
+			"item": [
+				{
+					"name": "Retrieve a list of picking slips with pagination and optional filtering by status.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/picking-slips?limit=10&page=1&status=not printed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"picking-slips"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "The number of items per page."
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The page number for pagination."
+								},
+								{
+									"key": "status",
+									"value": "not printed",
+									"description": "Filter by the status of the picking slip. Options include \"not printed\", \"printed\", and \"held\"."
+								}
+							]
+						},
+						"description": "This endpoint returns a paginated list of picking slips, filtered by status (optional). It can also return information about whether a picking slip has pre-order items."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
