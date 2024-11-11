@@ -48,6 +48,9 @@ You can also import the [Swagger JSON](http://localhost:3000/api/docs-json) form
 
 ### Endpoints
 
+Endpoints have a prefix of /api
+Example: http://localhost:3000/api/picking-slips
+
 #### GET /picking-slips
 
 Retrieve a paginated list of picking slips.
